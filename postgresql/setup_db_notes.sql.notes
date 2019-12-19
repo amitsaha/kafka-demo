@@ -1,0 +1,9 @@
+CREATE DATABASE metrics;
+CREATE USER consumer WITH ENCRYPTED PASSWORD 'consumer';
+GRANT ALL PRIVILEGES ON DATABASE metrics TO consumer;
+
+\connect  metrics;
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO consumer;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO consumer;
+CREATE TABLE node_metrics(id serial PRIMARY KEY, node_id VARCHAR(32), cpu_usage_percentage REAL NOT NULL, memory_usage_percentage REAL NOT NULL, timestamp BIGINT NOT NULL);

@@ -1,2 +1,3 @@
 *.tgz
-kafka-2*
+kafka/kafka_2.12-2.4.0*
+__pycache__
