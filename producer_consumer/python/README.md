@@ -2,7 +2,7 @@
 
 The producer and consumer uses [kafka-python](https://github.com/dpkp/kafka-python) package for
 communicating with Kafka and [psutil](https://psutil.readthedocs.io/en/latest/) for retrieving
-system metrics (producer only). 
+system metrics (producer only). It doesn't support encrypted communication with the Kafka cluster.
 
 [poetry](https://python-poetry.org/) is used for package management.
 
