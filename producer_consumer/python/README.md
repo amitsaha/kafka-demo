@@ -78,6 +78,3 @@ To run unit tests:
 $ cd consumer 
 $ poetry run pytest
 ```
-
-
-

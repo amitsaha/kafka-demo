@@ -24,10 +24,20 @@ The scripts are available in the [kafka](./kafka) directory:
 
 ### PostgreSQL
 
-Setup a local installation of PostgreSQL using the instructions from [here](https://wiki.archlinux.org/index.php/PostgreSQL). Your Linux distro may have it's own dedicated installation guide.
+Setup a local installation of PostgreSQL using the instructions from [here](https://wiki.archlinux.org/index.php/PostgreSQL). 
+Your Linux distro may have it's own dedicated installation guide.
 
-Once done, login as the "superuser" and run the following SQL commands interactively
-(one by one):
+## Setup Kafka and PostgreSQL
+
+These steps should be executed after you have got access to a Kafka cluster and a PostgreSQL server.
+
+### Kafka
+
+- Create a topic called "metrics"
+
+### PostgreSQL
+
+Login as the "superuser" and run the following SQL commands interactively (one by one):
 
 
 ```
@@ -45,4 +55,3 @@ CREATE TABLE node_metrics(id serial PRIMARY KEY, node_id VARCHAR(32), cpu_usage_
 ## Producer and Consumer
 
 - [Python](./producer_consumer/python)
-
